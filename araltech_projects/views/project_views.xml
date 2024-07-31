@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_project_form" model="ir.ui.view">
+        <field name="name">araltech.project.form</field>
+        <field name="model">araltech.project</field>
+        <field name="arch" type="xml">
+            <form string="Project">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="image" widget="image"/>
+                        <field name="demo_url"/>
+                        <field name="demo_video_url"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_project_tree" model="ir.ui.view">
+        <field name="name">araltech.project.tree</field>
+        <field name="model">araltech.project</field>
+        <field name="arch" type="xml">
+            <tree string="Projects">
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_projects" model="ir.actions.act_window">
+        <field name="name">Projects</field>
+        <field name="res_model">araltech.project</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_project_root" name="Projects" sequence="10"/>
+    <menuitem id="menu_project" name="Projects" parent="menu_project_root" action="action_projects"/>
+</odoo>

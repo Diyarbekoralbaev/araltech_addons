@@ -1,6 +1,7 @@
 from odoo import http
 from odoo.http import request
 
+
 class ProjectController(http.Controller):
 
     @http.route('/projects', type='http', auth='public', website=True)

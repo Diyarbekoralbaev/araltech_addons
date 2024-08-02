@@ -8,6 +8,7 @@
     'website': 'http://www.yourwebsite.com',
     'depends': ['base', 'website'],
     'data': [
+        'security/public.xml',
         'security/ir.model.access.csv',
         'views/project_views.xml',
         'views/project_templates.xml',  # Ensure this is included

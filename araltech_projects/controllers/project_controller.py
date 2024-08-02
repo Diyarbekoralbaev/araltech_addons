@@ -5,7 +5,7 @@ class ProjectController(http.Controller):
 
     @http.route('/projects', type='http', auth='public', website=True)
     def project_list(self, **kwargs):
-        projects = request.env['araltech.project'].search([])
+        projects = request.env['araltech.project'].sudo().search([])
         return request.render('araltech_projects.project_list_template', {'projects': projects})
 
     @http.route('/projects/<model("araltech.project"):project>', type='http', auth='public', website=True)

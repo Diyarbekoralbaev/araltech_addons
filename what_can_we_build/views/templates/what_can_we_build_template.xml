@@ -1,0 +1,34 @@
+<!-- services_page_template.xml -->
+<odoo>
+    <template id="services_page" name="Services Page">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1 class="text-center my-5">What Can We Build</h1>
+                <div class="row">
+                    <t t-foreach="services" t-as="service">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <t t-if="service.image">
+                                    <img t-att-src="'data:image/png;base64,' + service.image.decode('utf-8')" class="card-img-top" alt="Service Image"/>
+                                </t>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center"><t t-esc="service.name"/></h5>
+                                    <p class="card-text text-justify"><t t-esc="service.description"/></p>
+                                    <ul class="list-unstyled">
+                                        <t t-foreach="service.features.split('\n')" t-as="feature">
+                                            <li><i class="fa fa-check-circle"></i> <t t-esc="feature"/></li>
+                                        </t>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <small class="text-muted">$<t t-esc="service.price"/></small> |
+                                    <small class="text-muted"><t t-esc="service.duration"/> days</small>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

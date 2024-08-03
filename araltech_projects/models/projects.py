@@ -9,7 +9,7 @@ class Project(models.Model):
 
     name = fields.Char(string="Name", required=True)
     description = fields.Text(string="Description")
-    image = fields.Binary(string="Image")
+    image = fields.Binary(string="Image", attachment=True)
     demo_url = fields.Char(string="Demo URL")
     demo_video_url = fields.Char(string="Demo Video URL")
     start_date = fields.Date(string="Start Date")

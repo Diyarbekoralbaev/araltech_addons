@@ -9,6 +9,7 @@
     'depends': ['base', 'website'],
     'data': [
         'security/public.xml',
+        'security/project_security.xml',
         'security/ir.model.access.csv',
         'views/project_views.xml',
         'views/project_templates.xml',  # Ensure this is included

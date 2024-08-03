@@ -13,9 +13,6 @@
                                 </t>
                                 <div class="card-body">
                                     <h5 class="card-title" t-esc="project.name"/>
-                                    <p class="card-text">
-                                        <t t-esc="project.description[:100]"/>...
-                                    </p>
                                     <a t-att-href="'/projects/' + str(project.id)" class="btn btn-primary">View Project</a>
                                 </div>
                             </div>

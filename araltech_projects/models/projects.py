@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, tools
 
 
 class Project(models.Model):
@@ -8,7 +8,7 @@ class Project(models.Model):
     _description = 'Project'
 
     name = fields.Char(string="Name", required=True)
-    description = fields.Text(string="Description")
+    description = fields.Html(string="Description")
     image = fields.Binary(string="Image", attachment=True)
     demo_url = fields.Char(string="Demo URL")
     demo_video_url = fields.Char(string="Demo Video URL")

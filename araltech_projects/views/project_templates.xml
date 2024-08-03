@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-md-4">
                         <t t-if="project.image">
-                            <img t-att-src="'data:image/png;base64,' + project.image" class="img-fluid"/>
+                            <img t-att-src="'data:image/png;base64,' + project.image.decode('utf-8')" class="img-fluid"/>
                         </t>
                     </div>
                 </div>

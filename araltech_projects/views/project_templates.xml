@@ -33,9 +33,7 @@
                         <div>
                             <a t-if="project.demo_url" t-att-href="project.demo_url" class="btn btn-primary mb-2">Demo URL</a>
                             <a t-if="project.demo_video_url" t-att-href="project.demo_video_url" class="btn btn-secondary mb-2">Demo Video URL</a>
-                        </div>
-                        <p class="mt-2">Start Date: <t t-esc="project.start_date"/></p>
-                        <p>End Date: <t t-esc="project.end_date"/></p>
+                        </div>  
                     </div>
                     <div class="col-md-4">
                         <t t-if="project.image">

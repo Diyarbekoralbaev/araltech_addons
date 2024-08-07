@@ -7,11 +7,11 @@ class Project(models.Model):
     _name = 'araltech.project'
     _description = 'Project'
 
-    name = fields.Char(string="Name", required=True)
-    description = fields.Html(string="Description")
-    image = fields.Binary(string="Image", attachment=True)
-    demo_url = fields.Char(string="Demo URL")
-    demo_video_url = fields.Char(string="Demo Video URL")
+    name = fields.Char(string="Name", required=True, translate=True)
+    description = fields.Html(string="Description" , translate=True)
+    image = fields.Binary(string="Image", attachment=True , help="This field holds the image used as image for the project, limited to 1024x1024px.")
+    demo_url = fields.Char(string="Demo URL" , help="This field holds the URL of the demo for the project.")
+    demo_video_url = fields.Char(string="Demo Video URL" , help="This field holds the URL of the demo video for the project.")
     start_date = fields.Date(string="Start Date")
     end_date = fields.Date(string="End Date")
 

@@ -11,6 +11,7 @@
                         <field name="image" widget="image"/>
                         <field name="demo_url"/>
                         <field name="demo_video_url"/>
+                        <field name="status"/>
                         <field name="start_date" optional="hide"/>
                         <field name="end_date" optional="hide"/>
                     </group>

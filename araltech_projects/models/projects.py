@@ -13,6 +13,8 @@ class Project(models.Model):
     demo_url = fields.Char(string="Demo URL" , help="This field holds the URL of the demo for the project.")
     demo_video_url = fields.Char(string="Demo Video URL" , help="This field holds the URL of the demo video for the project.")
     status = fields.Boolean(string="Status", default=False)
+    start_date = fields.Date(string="Start Date", default=fields.Date.today)
+    end_date = fields.Date(string="End Date", default=fields.Date.today)
 
     @api.model
     def create(self, vals):

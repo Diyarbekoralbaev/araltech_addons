@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_what_can_we_build_service_category,what_can_we_build.service_category,model_what_can_we_build_service_category,base.group_user,1,1,1,1
+access_what_can_we_build_service,what_can_we_build.service,model_what_can_we_build_service,base.group_user,1,1,1,1
+access_what_can_we_build_service_public,what_can_we_build.service,model_what_can_we_build_service,what_can_we_build.group_public_user,1,0,0,0

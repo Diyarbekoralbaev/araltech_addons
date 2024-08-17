@@ -1,0 +1,86 @@
+<!-- what_can_we_build_views.xml -->
+<odoo>
+    <data>
+        <!-- Service Category Tree View -->
+        <record id="view_service_category_tree" model="ir.ui.view">
+            <field name="name">service.category.tree</field>
+            <field name="model">what_can_we_build.service_category</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="status"/>
+                    <field name="created_at"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Service Category Form View -->
+        <record id="view_service_category_form" model="ir.ui.view">
+            <field name="name">service.category.form</field>
+            <field name="model">what_can_we_build.service_category</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="status"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Service Tree View -->
+        <record id="view_service_tree" model="ir.ui.view">
+            <field name="name">service.tree</field>
+            <field name="model">what_can_we_build.service</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="category"/>
+                    <field name="price"/>
+                    <field name="duration"/>
+                    <field name="status"/>
+                    <field name="created_at"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Service Form View -->
+        <record id="view_service_form" model="ir.ui.view">
+            <field name="name">service.form</field>
+            <field name="model">what_can_we_build.service</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="features"/>
+                        <field name="image" widget="image"/>
+                        <field name="price"/>
+                        <field name="duration"/>
+                        <field name="category"/>
+                        <field name="status"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action for Service Category -->
+        <record id="action_service_category" model="ir.actions.act_window">
+            <field name="name">Service Categories</field>
+            <field name="res_model">what_can_we_build.service_category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Action for Service -->
+        <record id="action_service" model="ir.actions.act_window">
+            <field name="name">Services</field>
+            <field name="res_model">what_can_we_build.service</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="menu_what_can_we_build_root" name="What Can We Build"/>
+        <menuitem id="menu_service_category" name="Service Categories" parent="menu_what_can_we_build_root" action="action_service_category"/>
+        <menuitem id="menu_service" name="Services" parent="menu_what_can_we_build_root" action="action_service"/>
+    </data>
+</odoo>

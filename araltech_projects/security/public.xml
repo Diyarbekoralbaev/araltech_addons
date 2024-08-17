@@ -1,0 +1,9 @@
+<!-- security/what_can_we_build_security.xml -->
+<odoo>
+    <data noupdate="1">
+        <!-- Public User Group -->
+        <record id="group_public_user" model="res.groups">
+            <field name="name">Public User</field>
+        </record>
+    </data>
+</odoo>
